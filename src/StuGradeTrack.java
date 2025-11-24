@@ -6,7 +6,7 @@ public class StuGradeTrack {
 
         System.out.print("Enter number of students: ");
         int n = sc.nextInt();
-
+        sc.nextLine();
         ArrayList<String> names = new ArrayList<>();
         ArrayList<Integer> marks = new ArrayList<>();
 
@@ -17,6 +17,7 @@ public class StuGradeTrack {
 
             System.out.print("Enter " + names.get(i) + "'s marks: ");
             marks.add(sc.nextInt());
+            sc.nextLine();
         }
 
         // Calculations
