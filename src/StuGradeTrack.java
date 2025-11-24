@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class StuGradeTrack {
     public static void main(String[] args) {
 
@@ -6,18 +7,21 @@ public class StuGradeTrack {
 
         System.out.print("Enter number of students: ");
         int n = sc.nextInt();
-        sc.nextLine();
+        sc.nextLine(); // consume leftover newline
+
         ArrayList<String> names = new ArrayList<>();
         ArrayList<Integer> marks = new ArrayList<>();
 
         // Input student details
         for (int i = 0; i < n; i++) {
             System.out.print("Enter student " + (i + 1) + " name: ");
-            names.add(sc.next());
+            String name = sc.nextLine(); // read full name
+            names.add(name);
 
-            System.out.print("Enter " + names.get(i) + "'s marks: ");
-            marks.add(sc.nextInt());
-            sc.nextLine();
+            System.out.print("Enter " + name + "'s marks: ");
+            int mark = sc.nextInt();
+            marks.add(mark);
+            sc.nextLine(); // consume leftover newline
         }
 
         // Calculations
@@ -44,5 +48,7 @@ public class StuGradeTrack {
         System.out.println("Highest Score : " + highest);
         System.out.println("Lowest Score  : " + lowest);
         System.out.println("----------------------------------------");
+
+        sc.close();
     }
 }
